@@ -14,7 +14,7 @@ servers:
   #   cmd: bin/jobs
 
 # Enable SSL auto certification via Let's Encrypt and allow for multiple apps on a single web server.
-# Remove this section when using multiple web servers and ensure you terminate SSL at your load balancer.
+# Remove this sections when using multiple web servers and ensure you terminate SSL at your load balancer.
 #
 # Note: If using Cloudflare, set encryption mode in SSL/TLS setting to "Full" to enable CF-to-app encryption.
 proxy:
@@ -54,7 +54,7 @@ env:
     # RAILS_LOG_LEVEL: debug
 
 # Aliases are triggered with "bin/kamal <alias>". You can overwrite arguments on invocation:
-# "bin/kamal logs -r job" will tail logs from the first server in the job section.
+# "bin/kamal logs -r job" will tail logs from the first server in the job sections.
 aliases:
   console: app exec --interactive --reuse "bin/rails console"
   shell: app exec --interactive --reuse "bash"
