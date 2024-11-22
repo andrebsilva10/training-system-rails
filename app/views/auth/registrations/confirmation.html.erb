@@ -1,0 +1,18 @@
+<% provide(:title, t('sessions.titles.account_confirmation')) %>
+<% provide(:head_title, t('sessions.titles.account_confirmation')) %>
+
+<%= form_with url: confirm_account_path, method: :patch do |form| %>
+
+    <%= form.hidden_field :email_address, value: params[:email_address] %>
+    <%= form.tw_text_field :confirmation_code %>
+
+
+    <div class="flex items-center justify-between mt-4">
+        <%= tw_link_to t('sessions.actions.resend_confirmation_conde'),
+                       resend_confirmation_path(email_address: params[:email_address]),
+                       method: :patch,
+                       data: { turbo_method: :patch, turbo_confirm: t('prompt.confirm') } %>
+
+        <%= form.tw_submit t('sessions.actions.confirm_account') %>
+    </div>
+<% end %>

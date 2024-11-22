@@ -1,0 +1,35 @@
+pt-BR:
+  registrations:
+    signed_up_but_unconfirmed: 'Uma mensagem com um link de confirmação foi enviada para seu endereço de email. Por favor, siga o link para ativar sua conta.'
+  sessions:
+    titles:
+      sign_in: Entrar
+      forgot_password: Esqueceu a senha?
+      update_password: Atualizar senha
+      account_confirmation: Confirmar conta
+      register: Registrar-se
+    actions:
+      sign_in: Entrar
+      sign_out: Sair
+      forget_password: Esqueceu a senha?
+      send_reset_password_instructions: Enviar instruções de redefinição
+      back_to_sign_in: Voltar para a tela de login?
+      reset_password: Redefinir senha
+      confirm_account: Confirmar conta
+      resend_confirmation_conde: Reenviar código de confirmação
+      register: Registrar-se
+      already_have_account: Já tem uma conta?
+    flash:
+      error: E-mail e/ou senha incorretos!
+      send_reset_password_instructions: Instruções para redefinição de senha enviadas (se o usuário com esse endereço de e-mail existir).
+      unconfirmed_account: Sua conta ainda não foi confirmada. Por favor, verifique seu e-mail e siga as instruções para confirmar sua conta.
+      account_confirmed: Sua conta foi confirmada com sucesso. Agora você pode fazer login.
+      invalid_confirmation_code: O código de confirmação é inválido ou expirou. Por favor, solicite um novo.
+      token_invalid: O link para redefinição de senha é inválido ou expirou. Por favor, solicite um novo.
+      confirmation_token_resent: Um novo código de confirmação foi enviado para seu endereço de e-mail.
+      account_already_confirmed: Sua conta já foi confirmada. Faça login para continuar.
+      signed_in: Login realizado com sucesso.
+      signed_out: Logout realizado com sucesso.
+      already_signed_out: Logout realizado com sucesso.
+      rate_limit: Muitas tentativas de login. Por favor, aguarde alguns minutos antes de tentar novamente.
+      already_signed_in: Você já está logado.

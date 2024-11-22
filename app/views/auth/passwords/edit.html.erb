@@ -1,0 +1,14 @@
+<% provide :head_title, t('sessions.titles.update_password') %>
+<% provide :title, t('sessions.titles.update_password') %>
+
+<%= form_with model: @user, url: password_path(params[:token]), method: :put, html: { novalidate: true } do |form| %>
+
+    <%= form.tw_password_field :password, required: true, autocomplete: "off", maxlength: 72 %>
+    <%= form.tw_password_field :password_confirmation, required: true, autocomplete: "off", maxlength: 72 %>
+
+    <div class="flex items-center justify-between mt-4">
+        <%= tw_link_to t('buttons.back'), new_password_path %>
+
+        <%= form.tw_submit t('sessions.actions.reset_password') %>
+    </div>
+<% end %>

@@ -1,0 +1,17 @@
+<!-- Tab Navigation -->
+<div class="flex space-x-4 border-b">
+    <%= active_button_to t('.tabs.personal_data'), users_edit_profile_path, method: :get,
+                         class: "py-2 px-4 text-gray-600 hover:text-blue-600 focus:outline-none" %>
+
+    <%= active_button_to t('.tabs.password'), users_edit_password_path, method: :get,
+                         class: "py-2 px-4 text-gray-600 hover:text-blue-600 focus:outline-none" %>
+</div>
+
+<!-- Tab Content -->
+<div class="mt-4">
+    <%= yield %>
+</div>
+
+
+
+

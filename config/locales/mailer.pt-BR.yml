@@ -1,0 +1,15 @@
+pt-BR:
+  mailer:
+    reset_password:
+      subject: Instruções para redefinição de senha
+      message: Você pode redefinir sua senha nos próximos 15 minutos em
+      link: esta página de redefinição de senha
+    account_confirmation:
+      subject: Confirmação de conta
+      message:
+        part0: Seu código de confirmação é
+        part1: Por favor, insira este código na página de confirmação para ativar sua conta. O código expirará em 10 minutos.
+        part2: Para isso use o link abaixo
+    greetings:
+      hello: Olá
+      goodbye: Até logo

@@ -1,0 +1,35 @@
+<div data-controller="dropdown" data-action="click@window->dropdown#close">
+    <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+
+        <%= button_tag id: 'user-menu-button',
+                       data: { action: 'click->dropdown#toggle' },
+                       class: 'flex items-center text-sm pe-1 font-medium rounded-full hover:text-gray-700 md:me-0',
+                       type: 'button' do %>
+            <span class="sr-only">Menu</span>
+
+            <%= image_tag(Current.user.avatar_url, alt: Current.user.name, class: 'object-cover w-8 h-8 me-2 rounded-full') %>
+
+            <%= Current.user.name %>
+        <% end %>
+    </div>
+
+    <div data-dropdown-target="menu" class="absolute right-8 top-14 z-50 hidden my-4 bg-white text-base list-none divide-y text-gray-700 divide-gray-200 rounded-lg shadow">
+        <div class="px-4 py-3 text-sm">
+            <span class="block"><%= Current.user.name %></span>
+            <span class="block truncate"><%= Current.user.email_address %></span>
+        </div>
+
+        <ul class="py-2" aria-labelledby="user-menu-button">
+            <% links = [
+                { text: t('links.profile'), url: users_edit_profile_path },
+                { text: t('sessions.actions.sign_out'), url: session_path, data: { turbo_method: :delete } }
+            ] %>
+
+            <% links.each do |link| %>
+                <li>
+                    <%= link_to link[:text], link[:url], class: "block px-4 py-2 text-sm hover:bg-blue-100 rounded-lg", data: link.fetch(:data, {}) %>
+                </li>
+            <% end %>
+        </ul>
+    </div>
+</div>

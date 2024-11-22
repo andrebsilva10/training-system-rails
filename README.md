@@ -1,24 +1,55 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This README documents the steps necessary to get the Rails 8 authentication example application up and running.
 
-Things you may want to cover:
+## Ruby version
 
-* Ruby version
+- Ruby 3.1.0
 
-* System dependencies
+## System dependencies
 
-* Configuration
+- Rails 8.0.0
+- Bundler
 
-* Database creation
+## Configuration
 
-* Database initialization
+1. Clone the repository.
+2. Run `bundle install` to install dependencies.
 
-* How to run the test suite
+## Database creation
 
-* Services (job queues, cache servers, search engines, etc.)
+Run the following command to create the database:
 
-* Deployment instructions
+```sh
+rails db:create
+```
 
-* ...
+## Features
+
+### Public page
+
+- Home page with hero section
+
+### Authentication
+
+- User registration with email confirmation.
+- User login and logout.
+- Password reset functionality.
+
+### User Dashboard
+
+- Edit profile information.
+- Update avatar.
+- Change password.
+
+### Routes
+
+- `/` - Root page with hero section
+- `/signup` - User registration
+- `/login` - User login
+- `/logout` - User logout
+- `/password/new` - Request password reset
+- `/password/edit` - Reset password
+- `/users/profile/edit` - Edit profile
+- `/users/profile/edit_password` - Change password
+- `/users/profile/update_avatar` - Update avatar

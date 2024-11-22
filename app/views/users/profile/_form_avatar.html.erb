@@ -1,0 +1,52 @@
+<div class="flex justify-center">
+    <%= form_with model: @user, url: users_update_avatar_path, method: :patch, html: { id: :user_update_avatar, multipart: true, data: { controller: "avatar-preview" } } do |f| %>
+        <div class="relative inline-block">
+
+            <!-- Avatar Image -->
+            <%= image_tag @user.avatar_url,
+                          data: { action: "click->avatar-preview#selectImage", avatar_preview_target: "image" },
+                          id: "avatar-preview",
+                          class: "object-cover w-40 h-40 border-4 border-solid border-white rounded-full cursor-pointer",
+                          alt: "Bordered avatar" %>
+
+            <!-- Edit Button -->
+            <%= button_tag type: 'button',
+                           class: 'absolute bottom-0 right-0 w-8 h-8 p-0 rounded-full transform -translate-y-2
+                                   translate-x-4 ring-2 ring-gray-300 bg-white hover:bg-blue-100
+                                   flex items-center justify-center',
+                           data: { action: "click->avatar-preview#toggleEdit", avatar_preview_target: "edit" }, title: 'Edit' do %>
+                <%= icon(:pen, class: "w-1/2") %>
+            <% end %>
+
+            <!-- Save Button -->
+            <%= button_tag type: 'submit',
+                           class: 'absolute bottom-0 right-0 w-8 h-8 p-0 rounded-full transform -translate-y-1
+                                   translate-x-4 ring-2 ring-gray-300 bg-white hover:bg-blue-100 hidden
+                                   flex items-center justify-center',
+                           data: { avatar_preview_target: "check" }, title: 'Save' do %>
+                <%= icon(:check, class: "w-1/2 text-green-700") %>
+            <% end %>
+
+            <!-- Delete Avatar Button (Trash) -->
+            <%= link_to users_delete_avatar_path, data: { turbo_method: :delete, avatar_preview_target: "trash" },
+                        title: 'Trash',
+                        class: 'absolute bottom-0 right-0 w-8 h-8 p-1 px-2 rounded-full transform -translate-y-1
+                                translate-x-14 ring-2 ring-gray-300 bg-white hidden flex items-center justify-center
+                                hover:bg-blue-100' do %>
+                <%= icon(:trash, class: "w-3/4 text-red-700") %>
+            <% end %>
+
+            <!-- Avatar Select Label -->
+            <label for="user_avatar_upload" data-avatar-preview-target="label"
+                   class="absolute top-0 w-40 h-40 p-1 rounded-full bg-black bg-opacity-35 flex items-center
+                          justify-center text-white text-center cursor-pointer group-hover:opacity-100
+                          group-hover:pointer-events-auto hidden">
+                <%= t('.select_avatar') %>
+            </label>
+        </div>
+
+        <!-- File Input -->
+        <%= f.file_field :avatar, class: 'hidden', id: 'user_avatar_upload', accept: 'image/png, image/jpeg',
+                         data: { avatar_preview_target: "input", action: "change->avatar-preview#preview" } %>
+    <% end %>
+</div>

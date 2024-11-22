@@ -1,0 +1,50 @@
+pt-BR:
+  prompt:
+    confirm: Tem certeza?
+  links:
+    profile: Perfil
+  buttons:
+    create: Criar
+    destroy: Excluir
+    edit: Editar
+    update: Atualizar
+    register: Cadastrar
+    save: Salvar
+    back: Voltar
+  form:
+    fields:
+      email_address: E-mail
+      confirmation_code: Código de confirmação
+      password: Senha
+      password_confirmation: Confirmação de senha
+      new_password: Nova senha
+  breadcrumbs:
+    home: Home
+    profile: Perfil
+  helpers:
+    placeholder:
+      email_address: Digite seu e-mail
+      confirmation_code: Digite o código de confirmação
+      password: Digite sua senha
+  users:
+    home:
+      dashboard:
+        title: Dashboard
+    profile:
+      title: Perfil
+      form_avatar:
+        select_avatar: Click para selecionar um avatar
+      edit:
+        title: Editar perfil
+      edit_password:
+        title: Editar senha
+      page:
+        tabs:
+          personal_data: Alterar Dados pessoais
+          password: Alterar Senha
+      update:
+        success: Perfil atualizado com sucesso
+      delete_avatar:
+        success: Avatar excluído com sucesso
+      update_password:
+        success: Senha atualizada com sucesso

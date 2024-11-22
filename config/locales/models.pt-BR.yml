@@ -1,0 +1,20 @@
+pt-BR:
+  activerecord:
+    errors:
+      messages:
+        wrong_current_password: Senha atual incorreta
+    models:
+      user: 'Usuário'
+    attributes:
+      defaults: &defaults
+        created_at: 'Criado em'
+        updated_at: 'Atualizado em'
+        name: 'Nome'
+        email_address: 'E-mail'
+      user:
+        password: 'Senha'
+        current_password: 'Senha atual'
+        password_confirmation: 'Confirmação da senha'
+        reset_password_token: 'Chave de redefinição de senha'
+        <<: *defaults
+
