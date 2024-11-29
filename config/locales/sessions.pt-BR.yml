@@ -33,3 +33,4 @@ pt-BR:
       already_signed_out: Logout realizado com sucesso.
       rate_limit: Muitas tentativas de login. Por favor, aguarde alguns minutos antes de tentar novamente.
       already_signed_in: Você já está logado.
+      password_updated: Sua senha foi atualizada com sucesso.

@@ -44,7 +44,7 @@ class Auth::RegistrationsController < ApplicationController
                   notice: t("sessions.flash.confirmation_token_resent")
     else
       flash[:alert] = "#{t('sessions.flash.account_already_confirmed')} E-mail: #{params[:email_address]}"
-      redirect_to confirmation_url(email_address: @user.email_address)
+      redirect_to confirmation_url(email_address: @user&.email_address)
     end
   end
 

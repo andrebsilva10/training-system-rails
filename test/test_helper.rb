@@ -9,6 +9,11 @@ module ActiveSupport
 
     # Add more helper methods to be used by all tests here...
     include FactoryBot::Syntax::Methods
+
+    def sign_in(user, password = "password")
+      post session_path, params: { email_address: user.email_address, password: password }
+      follow_redirect!
+    end
   end
 
   Shoulda::Matchers.configure do |config|

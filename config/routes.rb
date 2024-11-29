@@ -15,8 +15,8 @@ Rails.application.routes.draw do
   root "home#index"
 
   namespace :auth, as: "" do
-    resource :session
-    resources :passwords, param: :token
+    resource :session, only: %i[ new create destroy ]
+    resources :passwords, param: :token, except: %i[ index show ]
 
     get "signup", to: "registrations#new", as: :new_registration
     post "signup", to: "registrations#create", as: :registration
