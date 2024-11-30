@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   root "home#index"
 
-  namespace :auth, as: "" do
+  namespace :auth, as: "", path: "" do
     resource :session, only: %i[ new create destroy ]
     resources :passwords, param: :token, except: %i[ index show ]
 
