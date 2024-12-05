@@ -3,17 +3,17 @@
 
 <%= form_with url: session_url, html: { novalidate: true } do |form| %>
 
-    <%= form.tw_email_field :email_address, value: params[:email_address] %>
-    <%= form.tw_password_field :password %>
+   <%= form.tw_email_field :email_address, value: params[:email_address] %>
+   <%= form.tw_password_field :password %>
 
-    <div class="flex items-center justify-between mt-4">
-        <%= tw_link_to t('sessions.actions.forget_password'), new_password_path, class: "text-sm text-gray-600 dark:text-gray-200 hover:text-gray-500" %>
+   <div class="flex items-center justify-between mt-4">
+      <%= link_to t('sessions.actions.forget_password'), new_password_path, class: "text-sm text-gray-600 dark:text-gray-200 hover:text-gray-500" %>
 
-        <%= form.tw_submit t('sessions.actions.sign_in') %>
-    </div>
+      <%= form.tw_submit t('sessions.actions.sign_in') %>
+   </div>
 
 <% end %>
 
 <div class="text-center mt-4">
-    <%= tw_link_to t('sessions.actions.register'), new_registration_path %>
+   <%= link_to t('sessions.actions.register'), new_registration_path %>
 </div>

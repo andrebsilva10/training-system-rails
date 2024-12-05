@@ -9,13 +9,6 @@ module ApplicationHelper
     }[flash_type.to_sym] || "alert-#{flash_type}"
   end
 
-  def tw_link_to(*args, **kwargs)
-    default_classes = "text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline"
-    kwargs[:class] = "#{default_classes} #{kwargs[:class]}".strip
-
-    link_to(*args, **kwargs)
-  end
-
   def active_button_to(name, path, options = {})
     active_classes = "border-b-2 border-blue-600"
     options[:class] ||= ""

@@ -2,14 +2,14 @@
 <% provide(:head_title, t('sessions.titles.register')) %>
 
 <%= form_with model: @user, url: registration_path do |form| %>
-    <%= form.tw_text_field :name %>
-    <%= form.tw_email_field :email_address %>
-    <%= form.tw_password_field :password %>
-    <%= form.tw_password_field :password_confirmation %>
+   <%= form.tw_text_field :name %>
+   <%= form.tw_email_field :email_address %>
+   <%= form.tw_password_field :password %>
+   <%= form.tw_password_field :password_confirmation %>
 
-    <%= form.tw_submit t('sessions.actions.register') %>
+   <%= form.tw_submit t('sessions.actions.register') %>
 <% end %>
 
 <div class="mt-6 text-center ">
-    <%= tw_link_to t('sessions.actions.already_have_account'), new_session_path %>
+   <%= link_to t('sessions.actions.already_have_account'), new_session_path %>
 </div>
