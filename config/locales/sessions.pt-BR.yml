@@ -28,6 +28,7 @@ pt-BR:
       token_invalid: O link para redefinição de senha é inválido ou expirou. Por favor, solicite um novo.
       confirmation_token_resent: Um novo código de confirmação foi enviado para seu endereço de e-mail.
       account_already_confirmed: Sua conta já foi confirmada. Faça login para continuar.
+      confirmation_code_sent: Um código de confirmação foi enviado para seu endereço de e-mail.
       signed_in: Login realizado com sucesso.
       signed_out: Logout realizado com sucesso.
       already_signed_out: Logout realizado com sucesso.

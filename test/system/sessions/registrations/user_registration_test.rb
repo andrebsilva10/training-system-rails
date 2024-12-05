@@ -19,6 +19,7 @@ class UserRegistrationTest < ApplicationSystemTestCase
 
       click_on I18n.t("sessions.actions.register")
       assert_current_path confirmation_path(email_address: @user.email_address)
+      assert_alert(I18n.t("sessions.flash.confirmation_code_sent"))
 
       assert_equal 1, ActionMailer::Base.deliveries.size
       email = ActionMailer::Base.deliveries.last

@@ -12,7 +12,7 @@ class Auth::RegistrationsController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       UserMailer.confirmation_email(@user).deliver_later
-      redirect_to confirmation_url(email_address: @user.email_address)
+      redirect_to confirmation_url(email_address: @user.email_address), notice: t("sessions.flash.confirmation_code_sent")
     else
       render :new, status: :unprocessable_entity
     end

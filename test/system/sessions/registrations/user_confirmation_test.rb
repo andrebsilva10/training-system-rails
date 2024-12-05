@@ -48,4 +48,10 @@ class UserConfirmationTest < ApplicationSystemTestCase
     assert_alert("#{I18n.t('sessions.flash.account_already_confirmed')} E-mail: #{@user.email_address}")
     assert_current_path confirmation_path(email_address: @user.email_address)
   end
+
+  test "user can navigate to new session" do
+    click_on I18n.t("sessions.actions.back_to_sign_in")
+
+    assert_current_path new_session_path
+  end
 end

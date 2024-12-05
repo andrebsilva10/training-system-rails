@@ -8,7 +8,10 @@ class Users::BaseController < ActionController::Base
 
   layout "users/application"
 
-  before_action :default_breadcrumbs
+  def render(*args)
+    default_breadcrumbs
+    super
+  end
 
   private
 
