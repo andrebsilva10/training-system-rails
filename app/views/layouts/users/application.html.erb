@@ -1,47 +1,47 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title><%= content_for(:title) || "Cim" %></title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="mobile-web-app-capable" content="yes">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+   <head>
+      <title><%= full_title(content_for(:title)) %></title>
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="mobile-web-app-capable" content="yes">
+      <%= csrf_meta_tags %>
+      <%= csp_meta_tag %>
 
-    <%= yield :head %>
+      <%= yield :head %>
 
-    <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
-    <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
+      <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
+      <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/favicon/site.webmanifest">
+      <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+      <link rel="manifest" href="/favicon/site.webmanifest">
 
-    <%# Includes all stylesheet files in app/assets/stylesheets %>
-    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
-    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-</head>
+      <%# Includes all stylesheet files in app/assets/stylesheets %>
+      <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+      <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+      <%= javascript_importmap_tags %>
+   </head>
 
-<body class="bg-gray-100 bg-opacity-50">
-<div data-controller="sidebar">
-    <%= render 'layouts/users/header' %>
-    <%= render 'layouts/users/sidebar' %>
-</div>
-<main class="px-4 py-24 sm:ml-64 h-screen">
+   <body class="bg-gray-100 bg-opacity-50">
+      <div data-controller="sidebar">
+         <%= render 'layouts/users/header' %>
+         <%= render 'layouts/users/sidebar' %>
+      </div>
+      <main class="px-4 py-24 sm:ml-64 h-screen">
 
-    <div class="border-b border-gray-200 pb-2 mb-4">
-        <h1 class="text-3xl font-bold text-gray-600 dark:text-white"><%= yield(:head_title) %></h1>
-    </div>
-    
-    <%= render 'layouts/breadcrumbs/breadcrumbs' %>
+         <div class="border-b border-gray-200 pb-2 mb-4">
+            <h1 class="text-3xl font-bold text-gray-600 dark:text-white"><%= yield(:page_title) %></h1>
+         </div>
 
-    <div class="mx-auto mt-4 p-6 bg-white border border-gray-200 rounded-lg">
-        <%= render "layouts/flash/message" %>
-        <%= yield %>
-    </div>
+         <%= render 'layouts/breadcrumbs/breadcrumbs' %>
 
-</main>
-</body>
+         <div class="mx-auto mt-4 p-6 bg-white border border-gray-200 rounded-lg">
+            <%= render "layouts/flash/message" %>
+            <%= yield %>
+         </div>
+
+      </main>
+   </body>
 </html>

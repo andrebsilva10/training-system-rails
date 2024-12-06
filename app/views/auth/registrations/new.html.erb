@@ -1,5 +1,5 @@
 <% provide(:title, t('sessions.titles.register')) %>
-<% provide(:head_title, t('sessions.titles.register')) %>
+<% provide(:page_title, t('sessions.titles.register')) %>
 
 <%= form_with model: @user, url: registration_path do |form| %>
    <%= form.tw_text_field :name %>

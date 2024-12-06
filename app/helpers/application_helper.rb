@@ -1,6 +1,14 @@
 module ApplicationHelper
   ActionView::Base.default_form_builder = TailwindFormBuilder
 
+  def full_title(page_title = "", base_title = t("app.name"))
+    if page_title.nil? || page_title.empty?
+      base_title
+    else
+      "#{page_title} | #{base_title}"
+    end
+  end
+
   def flash_class_type(flash_type)
     { notice: "p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400",
       alert: "p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400",

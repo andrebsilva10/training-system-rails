@@ -1,4 +1,6 @@
 pt-BR:
+  app:
+    name: 'Rails Examples'
   prompt:
     confirm: Tem certeza?
   links:
