@@ -23,4 +23,8 @@
     .btn-secondary {
         @apply bg-gray-500 text-white hover:bg-gray-700 focus:ring-2 focus:ring-gray-400;
     }
+
+    aside .active {
+        @apply bg-blue-100;
+    }
 }
