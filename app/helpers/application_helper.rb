@@ -9,12 +9,14 @@ module ApplicationHelper
     end
   end
 
-  def flash_class_type(flash_type)
-    { notice: "p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400",
-      alert: "p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400",
-      success: "p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400",
-      warning: "p-4 mb-4 text-sm text-yellow-800 rounded-lg bg-yellow-50 dark:bg-gray-800 dark:text-yellow-300"
-    }[flash_type.to_sym] || "alert-#{flash_type}"
+  def rc(component_string, **args, &block)
+    component_class_name = component_string.split("\\").map(&:camelcase).join("::")
+
+    unless component_class_name.include? "::"
+      component_class_name = "#{component_class_name}::Standard"
+    end
+
+    render "#{component_class_name}::Component".constantize.new(**args), &block
   end
 
   def active_button_to(name, path, options = {})
