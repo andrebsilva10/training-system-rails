@@ -39,3 +39,13 @@
 /config/credentials/develpment.key
 
 /config/credentials/development.key
+
+# idea files
+.idea/*
+.tool-versions
+
+.vscode/*
+.DS_Store
+**/.DS_Store
+
+node_modules/*
