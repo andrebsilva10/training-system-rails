@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <%= render 'layouts/shared/head' %>
+  <%= render "layouts/shared/head" %>
 </head>
 
 <body class="bg-blue-50/80">
 <div data-controller="sidebar">
-  <%= render 'layouts/users/header' %>
-  <%= render 'layouts/users/sidebar' %>
+  <%= render "layouts/users/header" %>
+  <%= render "layouts/users/sidebar" %>
 </div>
 <main class="h-screen px-4 py-24 sm:ml-64">
 
@@ -15,7 +15,7 @@
     <h1 class="text-3xl font-bold text-gray-600 dark:text-white"><%= yield(:page_title) %></h1>
   </div>
 
-  <%= render 'layouts/breadcrumbs/breadcrumbs' %>
+  <%= render "layouts/breadcrumbs/breadcrumbs" %>
 
   <div class="mx-auto mt-4 rounded-lg border border-gray-200 bg-white p-6">
     <%= rc "flash/message" %>

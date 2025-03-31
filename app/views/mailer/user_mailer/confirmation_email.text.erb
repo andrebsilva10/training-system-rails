@@ -1,5 +1,5 @@
-<%= t('mailer.greetings.hello') %> <%= @user.name %>,
-<%= t('mailer.account_confirmation.message.part0') %>: <%= @user.confirmation_code %>
-<%= t('mailer.account_confirmation.message.part1') %>
-<%= link_to t('sessions.actions.confirm_account'), confirmation_url(email_address: @user.email_address) %>
-<%= t('mailer.account_confirmation.message.part2') %>
+<%= t("mailer.greetings.hello") %> <%= @user.name %>,
+<%= t("mailer.account_confirmation.message.part0") %>: <%= @user.confirmation_code %>
+<%= t("mailer.account_confirmation.message.part1") %>
+<%= link_to t("sessions.actions.confirm_account"), confirmation_url(email_address: @user.email_address) %>
+<%= t("mailer.account_confirmation.message.part2") %>

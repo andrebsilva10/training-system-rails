@@ -1,12 +1,12 @@
-<% provide :page_title, t('sessions.titles.forgot_password') %>
-<% provide :title, t('sessions.titles.forgot_password') %>
+<% provide :page_title, t("sessions.titles.forgot_password") %>
+<% provide :title, t("sessions.titles.forgot_password") %>
 
 <%= form_with url: passwords_path, html: { novalidate: true } do |form| %>
   <%= form.tw_email_field :email_address %>
 
-  <%= form.tw_submit t('sessions.actions.send_reset_password_instructions'), class: 'w-full' %>
+  <%= form.tw_submit t("sessions.actions.send_reset_password_instructions"), class: "w-full" %>
 <% end %>
 
 <div class="mt-4 text-center">
-  <%= link_to t('sessions.actions.back_to_sign_in'), new_session_path %>
+  <%= link_to t("sessions.actions.back_to_sign_in"), new_session_path %>
 </div>

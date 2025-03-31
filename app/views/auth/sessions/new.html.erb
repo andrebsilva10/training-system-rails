@@ -1,5 +1,5 @@
-<% provide :page_title, t('sessions.titles.sign_in') %>
-<% provide :title, t('sessions.titles.sign_in') %>
+<% provide :page_title, t("sessions.titles.sign_in") %>
+<% provide :title, t("sessions.titles.sign_in") %>
 
 <%= form_with url: session_url, html: { novalidate: true } do |form| %>
 
@@ -7,13 +7,13 @@
   <%= form.tw_password_field :password %>
 
   <div class="mt-4 flex items-center justify-between">
-    <%= link_to t('sessions.actions.forget_password'), new_password_path, class: "text-sm text-gray-600 dark:text-gray-200 hover:text-gray-500" %>
+    <%= link_to t("sessions.actions.forget_password"), new_password_path, class: "text-sm text-gray-600 dark:text-gray-200 hover:text-gray-500" %>
 
-    <%= form.tw_submit t('sessions.actions.sign_in') %>
+    <%= form.tw_submit t("sessions.actions.sign_in") %>
   </div>
 
 <% end %>
 
 <div class="mt-4 text-center">
-  <%= link_to t('sessions.actions.register'), new_registration_path %>
+  <%= link_to t("sessions.actions.register"), new_registration_path %>
 </div>

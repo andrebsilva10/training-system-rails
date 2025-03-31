@@ -47,6 +47,9 @@ gem "view_component"
 gem "active_link_to"
 
 group :development, :test do
+  gem "factory_bot_rails"
+  gem "faker"
+
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
 
@@ -64,8 +67,7 @@ group :development, :test do
   gem "rubocop-shopify"
   gem "rubocop-thread_safety"
 
-  gem "factory_bot_rails"
-  gem "faker"
+  gem "erb_lint", require: false
 end
 
 group :development do

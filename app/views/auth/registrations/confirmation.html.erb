@@ -1,5 +1,5 @@
-<% provide(:title, t('sessions.titles.account_confirmation')) %>
-<% provide(:page_title, t('sessions.titles.account_confirmation')) %>
+<% provide(:title, t("sessions.titles.account_confirmation")) %>
+<% provide(:page_title, t("sessions.titles.account_confirmation")) %>
 
 <%= form_with url: confirm_account_path, method: :patch do |form| %>
 
@@ -7,15 +7,15 @@
    <%= form.tw_text_field :confirmation_code %>
 
    <div class="flex items-center justify-between mt-4">
-      <%= link_to t('sessions.actions.resend_confirmation_conde'),
+      <%= link_to t("sessions.actions.resend_confirmation_conde"),
                        resend_confirmation_path(email_address: params[:email_address]),
                        method: :patch,
-                       data: { turbo_method: :patch, turbo_confirm: t('prompt.confirm') } %>
+                       data: { turbo_method: :patch, turbo_confirm: t("prompt.confirm") } %>
 
-      <%= form.tw_submit t('sessions.actions.confirm_account') %>
+      <%= form.tw_submit t("sessions.actions.confirm_account") %>
    </div>
 <% end %>
 
 <div class="mt-6 text-center ">
-   <%= link_to t('sessions.actions.back_to_sign_in'), new_session_path %>
+   <%= link_to t("sessions.actions.back_to_sign_in"), new_session_path %>
 </div>
