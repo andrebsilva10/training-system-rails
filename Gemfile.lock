@@ -257,9 +257,15 @@ GEM
       unicode-display_width (>= 2.4.0, < 3.0)
     rubocop-ast (1.33.0)
       parser (>= 3.3.1.0)
+    rubocop-capybara (2.21.0)
+      rubocop (~> 1.41)
+    rubocop-factory_bot (2.26.1)
+      rubocop (~> 1.61)
     rubocop-minitest (0.36.0)
       rubocop (>= 1.61, < 2.0)
       rubocop-ast (>= 1.31.1, < 2.0)
+    rubocop-packaging (0.5.2)
+      rubocop (>= 1.33, < 2.0)
     rubocop-performance (1.22.1)
       rubocop (>= 1.48.1, < 2.0)
       rubocop-ast (>= 1.31.1, < 2.0)
@@ -273,6 +279,10 @@ GEM
       rubocop-minitest
       rubocop-performance
       rubocop-rails
+    rubocop-shopify (2.16.0)
+      rubocop (~> 1.62)
+    rubocop-thread_safety (0.6.0)
+      rubocop (>= 1.48.1)
     ruby-progressbar (1.13.0)
     rubyzip (2.3.2)
     securerandom (0.3.2)
@@ -362,7 +372,15 @@ DEPENDENCIES
   puma (>= 5.0)
   rails (~> 8.0.2)
   rails-i18n (~> 8.0.1)
+  rubocop-capybara
+  rubocop-factory_bot
+  rubocop-minitest
+  rubocop-packaging
+  rubocop-performance
+  rubocop-rails
   rubocop-rails-omakase
+  rubocop-shopify
+  rubocop-thread_safety
   selenium-webdriver
   shoulda-context (~> 3.0.0.rc1)
   shoulda-matchers (~> 6.0)

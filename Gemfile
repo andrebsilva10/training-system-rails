@@ -55,6 +55,15 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+  gem "rubocop-minitest", require: false
+  gem "rubocop-rails", require: false
+  gem "rubocop-capybara"
+  gem "rubocop-factory_bot", require: false
+  gem "rubocop-packaging"
+  gem "rubocop-performance"
+  gem "rubocop-shopify"
+  gem "rubocop-thread_safety"
+
   gem "factory_bot_rails"
   gem "faker"
 end
