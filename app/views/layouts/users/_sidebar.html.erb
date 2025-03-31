@@ -1,12 +1,12 @@
-<aside data-sidebar-target="sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen pt-0 transition-transform -translate-x-full sm:translate-x-0 pt-16">
-    <div class="h-full px-3 py-4 overflow-y-auto border-r">
-        <ul class="space-y-2 font-sm text-gray-700">
-            <li>
-                <%= link_to users_root_path, class: 'flex items-center p-2 rounded-lg hover:bg-blue-100 group' do %>
-                    <%= icon(:home) %>
-                    <span class="ms-3">Home</span>
-                <% end %>
-            </li>
-        </ul>
-    </div>
+<aside data-sidebar-target="sidebar" class="fixed top-0 left-0 z-40 h-screen w-64 -translate-x-full pt-0 pt-16 transition-transform sm:translate-x-0">
+  <div class="h-full overflow-y-auto border-r border-gray-200 bg-white px-3 py-4">
+    <ul class="text-gray-700 space-y-2 font-sm">
+      <li>
+        <%= link_to users_root_path, class: 'flex items-center p-2 rounded-lg hover:bg-blue-100 group' do %>
+          <%= icon(:home) %>
+          <span class="ms-3">Home</span>
+        <% end %>
+      </li>
+    </ul>
+  </div>
 </aside>

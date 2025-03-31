@@ -3,12 +3,12 @@
 
 <%= form_with model: @user, url: password_path(params[:token]), method: :put, html: { novalidate: true } do |form| %>
 
-   <%= form.tw_password_field :password, required: true, autocomplete: "off", maxlength: 72 %>
-   <%= form.tw_password_field :password_confirmation, required: true, autocomplete: "off", maxlength: 72 %>
+  <%= form.tw_password_field :password, required: true, autocomplete: "off", maxlength: 72 %>
+  <%= form.tw_password_field :password_confirmation, required: true, autocomplete: "off", maxlength: 72 %>
 
-   <div class="flex items-center justify-between mt-4">
-      <%= link_to t('buttons.back'), new_password_path %>
+  <div class="mt-4 flex items-center justify-between">
+    <%= link_to t('buttons.back'), new_password_path %>
 
-      <%= form.tw_submit t('sessions.actions.reset_password') %>
-   </div>
+    <%= form.tw_submit t('sessions.actions.reset_password') %>
+  </div>
 <% end %>

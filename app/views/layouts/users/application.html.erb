@@ -4,20 +4,20 @@
   <%= render 'layouts/shared/head' %>
 </head>
 
-<body class="bg-gray-100 bg-opacity-50">
+<body class="bg-blue-50/80">
 <div data-controller="sidebar">
   <%= render 'layouts/users/header' %>
   <%= render 'layouts/users/sidebar' %>
 </div>
-<main class="px-4 py-24 sm:ml-64 h-screen">
+<main class="h-screen px-4 py-24 sm:ml-64">
 
-  <div class="border-b border-gray-200 pb-2 mb-4">
+  <div class="mb-4 border-b border-gray-200 pb-2">
     <h1 class="text-3xl font-bold text-gray-600 dark:text-white"><%= yield(:page_title) %></h1>
   </div>
 
   <%= render 'layouts/breadcrumbs/breadcrumbs' %>
 
-  <div class="mx-auto mt-4 p-6 bg-white border border-gray-200 rounded-lg">
+  <div class="mx-auto mt-4 rounded-lg border border-gray-200 bg-white p-6">
     <%= rc "flash/message" %>
     <%= yield %>
   </div>
